@@ -5,15 +5,15 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Installing dependencies and building React app...'
-        sh 'npm install'
-        sh 'npm run build'
+        bat 'npm install'
+        bat 'npm run build'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Running tests...'
-        sh 'npm test'
+        bat 'npm test'
       }
     }
 

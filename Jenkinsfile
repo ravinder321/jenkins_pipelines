@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    NETLIFY_AUTH_TOKEN = credentials('NETLIFY_AUTH_TOKEN') // Match the ID you set in Jenkins
+    NETLIFY_AUTH_TOKEN = credentials('nfp_NYrorpn4Fj6pTxGFZUAZtjHvia2i3gdPab17') // Match the ID you set in Jenkins
   }
 
   stages {
@@ -29,7 +29,7 @@ pipeline {
         bat 'npm install -g netlify-cli'
 
         // Deploy to Netlify (adjust site ID or use linked site if already configured)
-        bat 'netlify deploy --dir=build --auth=%NETLIFY_AUTH_TOKEN% --prod'
+        bat 'netlify deploy --site=6487e432-9f92-455a-9491-5574eaf195ab --dir=build --auth=%nfp_NYrorpn4Fj6pTxGFZUAZtjHvia2i3gdPab17% --prod'
       }
     }
 
